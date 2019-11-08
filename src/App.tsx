@@ -1,5 +1,8 @@
 import React from 'react';
+import ProductsList from './components/productsList.js';
+import Cart from './components/cart.js'
 import './App.css';
+
 
 const App = () => {
   return (
@@ -13,8 +16,11 @@ const App = () => {
       <p>
         Edit <code>src/App.tsx</code> and save to reload.
       </p>
-      <p>Products</p>
-      <p>Cart</p>
+      <ProductsList />
+      <Cart />  
+
+      {/* <p>Products</p>
+      <p>Cart</p> */}
     </div>
   );
 };

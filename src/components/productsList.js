@@ -1,14 +1,10 @@
 import React from "react";
-import {products} from "../constants/index";
+import { products } from "../constants/index";
 class ProductList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "Classic Tee",
-      price: "75.00",
-      size: "",
-      desc:
-        "This is a classic Tee.This is a classic Tee.This is a classic Tee.This    is a classic Tee.This is a classic Tee.This is a classic Tee.This is a      classic Tee.This is a classic Tee.This is a classic Tee.This is a classic Tee.This is a classic Tee.This is a classic Tee."
+      products: []
     };
     // this.handleClick = this.handleClick.bind(this);
   }
@@ -22,30 +18,26 @@ class ProductList extends React.Component {
   };
 
   componentDidMount() {
-    this.state = {
-      products: products
-    };
+    this.setState({ products: products });
   }
 
   render() {
     return (
-      <div className="ProductList">
+      <div className="Product-List">
         <h1>Product List</h1>
-      debugger;
-        {/* {this.state.products.map((item, index) => {
+        {this.state.products.map((item, index) => {
           return (
-            <div>
-              <h1>{item.name}</h1>
+            <div className="Product-Item">
+              <h2> {item.name}</h2> 
               <div className="price">${item.price}</div>
+              <button className="primary-btn" onClick={this.addToCart}>
+                ADD TO CART
+              </button>
             </div>
           );
-        })} */}
+        })}
 
-        <div>
-          <button className="primary-btn" onClick={this.addToCart}>
-            ADD TO CART
-          </button>
-        </div>
+        <div></div>
       </div>
     );
   }
