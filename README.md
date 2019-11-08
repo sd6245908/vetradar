@@ -2,14 +2,20 @@
 
 < add documentation here >
 
-Clone this repo into your local 
+##Clone this repo into your local 
 
-go to your local folder
+##go to your local folder
 
 npm install
 
+##if not working, try npm update
+
 npm start
 
+## I am not good at Typescript, so I am stuck with some complying issue when writing JS in a tsx file 
+## I left some comments in App.tsx  what I am going to do for the next steps.
+## I have confidence to finish every function required within 2 hours in a Pure Javascript prject.
+## Time is up.
 
 
 ---

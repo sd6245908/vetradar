@@ -50,7 +50,6 @@ class App extends React.Component<MyProps, MyState> {
 
     // setState, Cart will be rendered
 
-
   }
   handleOnItemRemove = (item = Object) => {
     //loop the items in the cart find the items with same name 
@@ -79,7 +78,7 @@ class App extends React.Component<MyProps, MyState> {
           <Cart items={this.MyState.addedProd} onItemRemoved={this.handleOnItemRemove} />
 
         </div>
-        
+
       </div>
     );
 
