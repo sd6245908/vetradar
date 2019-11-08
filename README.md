@@ -2,6 +2,16 @@
 
 < add documentation here >
 
+Clone this repo into your local 
+
+go to your local folder
+
+npm install
+
+npm start
+
+
+
 ---
 
 ## Test Instructions
