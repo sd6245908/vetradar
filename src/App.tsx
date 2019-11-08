@@ -3,38 +3,66 @@ import ProductsList from './components/productsList.js';
 import Cart from './components/cart.js'
 import './App.css';
 
+interface MyProps {
+}
 
-class App extends React.Component {
-  state = {
-    addedProd:[]
+interface MyState {
+  value: string
+}
+
+class App extends React.Component<MyProps, MyState> {
+  MyState = {
+    addedProd: []
   }
 
-  handleOnChange = (item:object) =>{
-  
-    // this.setState((state:object) => {
-    //   let flag = true;
-    //   this.state.addedProd.map(cItem,index:string=> {
-    //     if (cItem.size == item.size) {
-    //       state.addedProd[index].count++;
-    //       flag = false;
-    //     }
-    //   });
-    //   if (flag) {
-    //     const addedProd = [...state.addedProd, item];
-    //     return {
-    //       addedProd
-    //     };
-    //   }else{
-    //     const addedProd = [...state.addedProd];
-    //     return {
-    //       addedProd
-    //     };
-    //   }
-    // });
+  // handleOnChange = item => {
+  //   console.log(item);
+  //   this.setState(state => {
+  //     let flag = true;
+  //     state.addedProd.map((cItem,index)=> {
+  //       if (cItem.size == item.size) {
+  //         state.addedProd[index].count++;
+  //         flag = false;
+  //       }
+  //     });
+  //     if (flag) {
+  //       const addedProd = [...state.addedProd, item];
+  //       return {
+  //         addedProd
+  //       };
+  //     }else{
+  //       const addedProd = [...state.addedProd];
+  //       return {
+  //         addedProd
+  //       };
+  //     }
+  //   });
+  // };
+
+
+  handleOnAddToCart = (item: Object) => {
+    alert("Push a new Item to state.addedProd");
+    //loop the items in the cart find the items with same name 
+
+    // if item found, count++
+
+    //if item not found, push the item to cart
+
+    // setState, Cart will be rendered
+
 
   }
+  handleOnItemRemove = (item = Object) => {
+    //loop the items in the cart find the items with same name 
 
-  render(){
+    // if item found, count--
+
+    //if item not found, pull the item from cart
+
+    //// setState, Cart will be rendered
+  }
+
+  render() {
     return (
       <div className="App">
         <p>
@@ -47,14 +75,11 @@ class App extends React.Component {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <div className='Shopping' >
-        <ProductsList onChange={this.handleOnChange} />
-        <Cart items={this.state.addedProd}/>  
-  
+          <ProductsList onChange={this.handleOnAddToCart} />
+          <Cart items={this.MyState.addedProd} onItemRemoved={this.handleOnItemRemove} />
+
         </div>
-  
-  
-        {/* <p>Products</p>
-        <p>Cart</p> */}
+        
       </div>
     );
 

@@ -2,7 +2,10 @@ import React from "react";
 import ItemInCart from "./itemincart";
 
 class Cart extends React.Component {
-  state = {};
+  state = {
+    total: 0
+  };
+
   render() {
     return (
       <div className="Product-Cart">
@@ -10,7 +13,7 @@ class Cart extends React.Component {
         {this.props.items.map((item, index) => {
           return <ItemInCart item={item} key={index} />;
         })}
-        <div className="Total">Total:{0}</div>
+        <div className="Total">Total:{this.state.total}</div>
       </div>
     );
   }

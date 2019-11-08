@@ -9,10 +9,10 @@ class ProductList extends React.Component {
     // this.handleClick = this.handleClick.bind(this);
   }
 
-  addToCart = () => {
+  addToCart = (...item) => {
     this.props.onChange({
-      name: this.state.name,
-      price: this.state.price
+      name: item[0].name,
+      price: item[0].price
     });
   };
 
@@ -26,10 +26,10 @@ class ProductList extends React.Component {
         <h1>Product List</h1>
         {this.state.products.map((item, index) => {
           return (
-            <div className="Product-Item">
+            <div className="Product-Item" key={index}>
               <h2> {item.name}</h2> 
               <div className="price">${item.price}</div>
-              <button className="primary-btn" onClick={this.addToCart}>
+              <button className="primary-btn" onClick={this.addToCart.bind(this,item)}>
                 ADD TO CART
               </button>
             </div>
