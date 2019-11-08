@@ -17,6 +17,7 @@ npm start
 ## I have confidence to finish every function required within 2 hours in a Pure Javascript prject.
 ## Time is up.
 
+![image](https://github.com/sd6245908/vetradar/blob/master/public/images/screen.png)
 
 ---
 
