@@ -12,8 +12,7 @@ class ProductList extends React.Component {
   addToCart = () => {
     this.props.onChange({
       name: this.state.name,
-      price: this.state.price,
-      count: 1
+      price: this.state.price
     });
   };
 
@@ -36,8 +35,6 @@ class ProductList extends React.Component {
             </div>
           );
         })}
-
-        <div></div>
       </div>
     );
   }
